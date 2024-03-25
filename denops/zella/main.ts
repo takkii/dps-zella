@@ -1,6 +1,5 @@
 
-import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-beta.2/mod.ts';
-import {execute} from 'https://deno.land/x/denops_std@v1.0.0-beta.2/helper/mod.ts';
+import type { Denops } from "https://deno.land/x/denops_std@v6.4.0/mod.ts";
 
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
@@ -44,9 +43,6 @@ export async function main(denops: Denops): Promise<void> {
     console.log(`${this.OneYear}/${this.OneMonth}/${this.anyDays} : ${this.cl_wk}day`)
     }
 }
-
-    await execute(
-        denops,
-        `command! Zella call denops#notify('${denops.name}', 'zella', [])`
+    denops.cmd(`command! Zella call denops#notify('${denops.name}', 'zella', [])`
     );
 }
