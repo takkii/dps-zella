@@ -1,0 +1,14 @@
+*dps-zella*
+
+version: 2024/03/25
+Author: takkii <karuma.reason@gmail.com>
+License: MIT
+
+==============================================================================
+*Environment*
+
+Environment construction                Denops.vim / Neovim
+Introduction (vim-plug)                 Plug 'takkii/dps-zella'
+Start                                   :Zella
+
+==============================================================================
