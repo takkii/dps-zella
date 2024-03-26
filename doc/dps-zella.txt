@@ -8,6 +8,12 @@ License: MIT
 *Environment*
 
 Environment construction                Denops.vim / Neovim
+
+Settings are required                   Example / Windows 11 use Scoop
+-- denops settings / Add init.vim --
+let g:denops#deno = home .. '/scoop/shims/deno'
+let g:denops_disable_version_check = 1
+
 Introduction (vim-plug)                 Plug 'takkii/dps-zella'
 Start                                   :Zella
 
