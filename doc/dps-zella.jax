@@ -8,6 +8,13 @@ License: MIT
 *環境構築*
 
 環境構築                              Denops.vim / Neovim
+
+設定が必要                            例 / Windows 11でscoopを利用
+
+-- denopsの設定 / init.vimに追加 --
+let g:denops#deno = home .. '/scoop/shims/deno'
+let g:denops_disable_version_check = 1
+
 導入(vim-plug)                        Plug 'takkii/dps-zella'
 起動                                  :Zella
 
