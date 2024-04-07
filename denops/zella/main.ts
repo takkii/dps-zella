@@ -37,7 +37,7 @@ export async function main(denops: Denops): Promise<void> {
     }
 
     this.round_calc = Math.round(this.calc)
-    this.week = ["Sun", "Mon", "Tues", "Wedness", "Thurs", "Fri", "Satur"]
+    this.week = ["Sun", "Mon", "Tues", "Wedness", "Thurs", "Fri", "Satur", "Sun"]
     this.cl_wk = (this.week[this.round_calc])
 
     console.log(`${this.OneYear}/${this.OneMonth}/${this.anyDays} : ${this.cl_wk}day`)
