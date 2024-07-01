@@ -29,7 +29,7 @@ export async function main(denops: Denops): Promise<void> {
             this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 427) % 7
         }
         else {
-            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 7
+            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 6
         }
     } else {
         this.calc = (this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 +
