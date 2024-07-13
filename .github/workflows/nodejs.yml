@@ -21,7 +21,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: npm install
       - name: Node.js dps-zella Assertion
         run: node ./assert.js
