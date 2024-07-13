@@ -22,18 +22,20 @@ export async function main(denops: Denops): Promise<void> {
 
     if (this.OneYear % 4 == 0 && this.OneYear % 100 != 0 || this.OneYear % 400 == 0) {
         if (this.OneMonth == 2 && this.anyDays == 29) {
-            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 +
-                (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 426) % 7;
+            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 +
+                      this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 426) % 7;
         }
-        else if (this.OneMonth == 2 && this.OneMonth == 4 && this.OneMonth == 6 && this.OneMonth == 9 && this.anyDays == 30) {
-            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 6;
-        }
+        else if (this.OneMonth == (2 && 4 && 6 && 9)) {
+            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 +
+                          this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 6;
+          }
         else {
-            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 7;
+            this.calc = ((365 * this.OneYear + this.OneYear / 4 - this.OneYear / 100 +
+                          this.OneYear / 400 + (306 * (this.OneMonth + 1)) / 10 + this.anyDays) - 428) % 7;
         }
     } else {
-        this.calc = (this.OneYear + this.OneYear / 4 - this.OneYear / 100 + this.OneYear / 400 +
-                    (13 * this.OneMonth + 8) / 5 + this.anyDays) % 7
+          this.calc = (this.OneYear + this.OneYear / 4 - this.OneYear / 100 +
+                       this.OneYear / 400 + (13 * this.OneMonth + 8) / 5 + this.anyDays) % 7
     }
 
     this.round_calc = Math.floor(this.calc);
