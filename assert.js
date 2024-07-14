@@ -30,13 +30,14 @@ var UnitTest = /** @class */ (function () {
             }
             this.fl_calc = Math.floor(this.calc);
             assert.equal(this.fl_calc, this.WeekDay, 'cl_wk is equals to WeekDay');
-            console.log('assertion check, done ✅');
+            console.log('Assertion Check, Done ✅');
         }
         catch (err) {
             console.log('------------ Assertion Error ------------');
             console.log(err);
             console.log('------------ Stack Trace ------------');
             console.log(err.stack);
+            console.log('Assertion Check, None ❌');
         }
     };
     return UnitTest;
