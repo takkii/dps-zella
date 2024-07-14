@@ -13,7 +13,7 @@ export async function main(denops: Denops): Promise<void> {
            let week: string[];
            let cl_wk: string;
            let justnow: any;
-           let round_calc: any;
+           let fl_calc: any;
            this.OneDay = new Date()
            this.OneYear= this.OneDay.getFullYear()
            this.anything_month = this.OneDay.getMonth()
@@ -38,9 +38,9 @@ export async function main(denops: Denops): Promise<void> {
                        this.OneYear / 400 + (13 * this.OneMonth + 8) / 5 + this.anyDays) % 7
     }
 
-    this.round_calc = Math.floor(this.calc);
+    this.fl_calc = Math.floor(this.calc);
     this.week = ["Sun", "Mon", "Tues", "Wedness", "Thurs", "Fri", "Satur", "Sun"]
-    this.cl_wk = (this.week[this.round_calc])
+    this.cl_wk = (this.week[this.fl_calc])
 
     console.log(`${this.OneYear}/${this.OneMonth}/${this.anyDays} : ${this.cl_wk}day`)
     }
