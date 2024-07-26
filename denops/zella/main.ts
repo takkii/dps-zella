@@ -20,7 +20,7 @@ export async function main(denops: Denops): Promise<void> {
            this.anything_month = this.OneDay.getMonth();
            this.OneMonth = this.anything_month + 1;
            this.anyDays = this.OneDay.getDate();
-           this.language = Deno.env.get("LANG");
+           this.language = Deno.env.get("LANG") || Deno.env.get("LANGUAGE") || Deno.env.get("LC_ALL") || Deno.env.get("LC_MESSAGES");
 
     if (this.OneYear % 4 == 0 && this.OneYear % 100 != 0 || this.OneYear % 400 == 0) {
         if (this.OneMonth == 2 && this.anyDays == 29) {
